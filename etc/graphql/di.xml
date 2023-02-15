@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Bss\ApiCustomizeForGranato\Model\Resolver\ProductPrice\PoolProvider">
+        <arguments>
+            <argument name="pools" xsi:type="array">
+                <item name="minimum_price" xsi:type="object">Bss\ApiCustomizeForGranato\Model\Resolver\ProductPrice\MinimumPriceExclTaxField</item>
+                <item name="maximum_price" xsi:type="object">Bss\ApiCustomizeForGranato\Model\Resolver\ProductPrice\MaximumPriceExclTaxField</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

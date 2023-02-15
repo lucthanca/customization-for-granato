@@ -1,0 +1,9 @@
+type PriceRange @doc(description: "Price range for a product. If the product has a single price, the minimum and maximum price will be the same."){
+    minimum_price: ProductPrice! @resolver(class: "\\Bss\\ApiCustomizeForGranato\\Model\\Resolver\\ProductPriceWithExclTax")
+    maximum_price: ProductPrice @resolver(class: "\\Bss\\ApiCustomizeForGranato\\Model\\Resolver\\ProductPriceWithExclTax")
+}
+
+type ProductPrice {
+    regular_price_excl_tax: Money @doc(description: "The regular price without tax of the product. Present when catalog tax display both.")
+    final_price_excl_tax: Money @doc(description: "The final price without tax of the product after discounts applied. Present when catalog tax display both.")
+}
