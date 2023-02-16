@@ -7,3 +7,7 @@ type ProductPrice {
     regular_price_excl_tax: Money @doc(description: "The regular price without tax of the product. Present when catalog tax display both.")
     final_price_excl_tax: Money @doc(description: "The final price without tax of the product after discounts applied. Present when catalog tax display both.")
 }
+
+type StoreConfig {
+    tax_display_in_catalog: Int @doc(description: "Display Product Prices In Catalog")
+}
