@@ -8,6 +8,10 @@ type ProductPrice {
     final_price_excl_tax: Money @doc(description: "The final price without tax of the product after discounts applied. Present when catalog tax display both.")
 }
 
+type TierPrice @doc(description: "A price based on the quantity purchased.") {
+    final_price_incl_tax: Money @doc(desription: "The price of the product with tax at this tier.")
+}
+
 type StoreConfig {
     tax_display_in_catalog: Int @doc(description: "Display Product Prices In Catalog")
 }

@@ -16,4 +16,6 @@
             </argument>
         </arguments>
     </type>
+
+   <preference for="Magento\CatalogCustomerGraphQl\Model\Resolver\PriceTiers" type="Bss\ApiCustomizeForGranato\Model\Resolver\PriceTiers"/>
 </config>
